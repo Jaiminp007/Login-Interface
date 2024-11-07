@@ -11,8 +11,8 @@ This project is a Python application that provides a simple user interface for l
 ## Technologies Used
 
 - Python
-- Tkinter (for GUI)
-- MySQL (for database management)
+- Flask
+- Json File
 
 ## Installation
 
