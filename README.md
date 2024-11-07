@@ -47,10 +47,3 @@ streamlit run main.py
 Feel free to submit pull requests or open issues for any improvements or bug fixes.
 
 
-Here is the example of the program:-
-![1stimage](assets/1.png)
-![2ndimage](assets/2.png)
-![3rdimage](assets/3.png)
-![4thimage](assets/4.png)
-
-
