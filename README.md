@@ -19,8 +19,7 @@ This project is a Python application that provides a simple user interface for l
 
 To run the application, use the following command:
 
-bash
-streamlit run main.py
+https://login-interface.onrender.com
 
 
 ## Contributing
