@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <style>
+        /* Reset some default styles */
+        body, h2, h3, ul, p, form {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000; /* Black background */
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h2 {
+            color: #4db8ff; /* Light blue color for the header */
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        p, h3 {
+            color: #a0c4e6; /* Lighter blue for text */
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        /* Center the Login Times section */
+        ul {
+            list-style: none;
+            padding-left: 0;
+            text-align: center;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li {
+            width: 200px;
+            background-color: #333;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 4px;
+            color: white;
+            display: block; /* Makes the <li> behave like an inline element */
+        }
+
+        .btn-container {
+            margin-top: 30px; /* Space above the buttons */
+        }
+
+        button {
+            padding: 8px 12px;
+            background-color: #4db8ff; /* Light blue background for the buttons */
+            color: white;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3399cc; /* Darker blue on hover */
+        }
+
+        .delete-btn {
+            background-color: red; /* Red background for Delete button */
+        }
+
+        .delete-btn:hover {
+            background-color: darkred; /* Darker red on hover */
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2>Welcome to your Account, {{ username }}</h2>
+    <p>Account Created: {{ acct_creation_time }}</p>
+
+    <h3>Login Times:</h3>
+    <ul>
+        {% for time in login_times %}
+            <li>{{ time }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Buttons below the login times, centered -->
+    <div class="btn-container">
+        <form action="{{ url_for('logout') }}" method="post">
+            <button type="submit">Logout</button>
+        </form>
+
+        <form action="{{ url_for('delete_account') }}" method="post">
+            <button type="submit" class="delete-btn">Delete Account</button>
+        </form>
+    </div>
+
+</body>
+</html>
