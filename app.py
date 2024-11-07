@@ -20,6 +20,10 @@ def save_data(data):
     with open("data.json", "w") as file:
         json.dump(data, file, indent=4)
 
+@app.route('/')
+def home():
+    return redirect(url_for('login'))  # Redirect to login page when accessing the root URL
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
