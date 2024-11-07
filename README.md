@@ -14,25 +14,6 @@ This project is a Python application that provides a simple user interface for l
 - Flask
 - Json File
 
-## Installation
-
-1. Clone the repository:
-
-   bash
-   git clone https://github.com/Jaiminp007/Login_interface.git
-
-2. Navigate to the project directory:
-
-   bash
-   cd Login_interface
-
-3. Install the required packages:
-
-   bash
-   pip install -r requirements.txt
-   
-
-4. Set up your MySQL database and update the database connection parameters in the code.
 
 ## Usage
 
